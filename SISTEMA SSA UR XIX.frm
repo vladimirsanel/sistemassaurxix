@@ -7,8 +7,8 @@ Begin VB.Form FormActAdmin
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form1"
-   ScaleHeight     =   3015
-   ScaleWidth      =   4560
+   ScaleHeight     =   10935
+   ScaleWidth      =   20250
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.OptionButton OptInfSumaria 
@@ -116,7 +116,7 @@ Begin VB.Form FormActAdmin
       Height          =   405
       Left            =   3840
       TabIndex        =   34
-      Top             =   2160
+      Top             =   1440
       Width           =   2535
    End
    Begin VB.TextBox TxtFechaHecho 
