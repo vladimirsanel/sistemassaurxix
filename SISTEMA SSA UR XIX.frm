@@ -116,7 +116,7 @@ Begin VB.Form FormActAdmin
       Height          =   405
       Left            =   3840
       TabIndex        =   34
-      Top             =   1440
+      Top             =   2160
       Width           =   2535
    End
    Begin VB.TextBox TxtFechaHecho 
