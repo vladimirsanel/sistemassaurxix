@@ -1,0 +1,17 @@
+Línea 34: la clase MSComCtl2.DTPicker del control DTPicker1 no era una clase de control cargada.
+Línea 252: la clase MSComCtl2.DTPicker del control DTPicker2 no era una clase de control cargada.
+Línea 40: el nombre de la propiedad _ExtentX de DTPicker1 no es válido.
+Línea 41: el nombre de la propiedad _ExtentY de DTPicker1 no es válido.
+Línea 42: el nombre de la propiedad _Version de DTPicker1 no es válido.
+Línea 52: el nombre de la propiedad CalendarBackColor de DTPicker1 no es válido.
+Línea 53: el nombre de la propiedad CalendarTitleBackColor de DTPicker1 no es válido.
+Línea 54: el nombre de la propiedad Format de DTPicker1 no es válido.
+Línea 55: el nombre de la propiedad CurrentDate de DTPicker1 no es válido.
+Línea 258: el nombre de la propiedad _ExtentX de DTPicker2 no es válido.
+Línea 259: el nombre de la propiedad _ExtentY de DTPicker2 no es válido.
+Línea 260: el nombre de la propiedad _Version de DTPicker2 no es válido.
+Línea 270: el nombre de la propiedad CalendarBackColor de DTPicker2 no es válido.
+Línea 271: el nombre de la propiedad CalendarTitleBackColor de DTPicker2 no es válido.
+Línea 272: el nombre de la propiedad CalendarTitleForeColor de DTPicker2 no es válido.
+Línea 273: el nombre de la propiedad Format de DTPicker2 no es válido.
+Línea 274: el nombre de la propiedad CurrentDate de DTPicker2 no es válido.
