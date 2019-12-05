@@ -868,13 +868,13 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Sub CargarDatos()
 TxtNro.Text = db.rsACTUACIONES.Fields!Nro.Value
-TxtFechaIngreso.Text = db.rsACTUACIONES.Fields!FechaIngreso.Value
-TxtFechaHecho.Text = db.rsACTUACIONES.Fields!FechaHecho.Value
-TxtCausante.Text = db.rsACTUACIONES.Fields!Causante.Value
+TxtFechaIngreso.Text = db.rsACTUACIONES.Fields!fechaIngreso.Value
+TxtFechaHecho.Text = db.rsACTUACIONES.Fields!fechaHecho.Value
+TxtCausante.Text = db.rsACTUACIONES.Fields!causante.Value
 TxtDestino.Text = db.rsACTUACIONES.Fields!Destino.Value
-TxtCaratula.Text = db.rsACTUACIONES.Fields!Caratula.Value
-TxtCarAdmin.Text = db.rsACTUACIONES.Fields!CarAdmin.Value
-TxtDescripcion.Text = db.rsACTUACIONES.Fields!Descripcion.Value
+TxtCaratula.Text = db.rsACTUACIONES.Fields!caratula.Value
+TxtCarAdmin.Text = db.rsACTUACIONES.Fields!carAdmin.Value
+TxtDescripcion.Text = db.rsACTUACIONES.Fields!descripcion.Value
 End Sub
 
 Function CargarNro()
@@ -907,13 +907,13 @@ End Sub
 
 Private Sub CmdActualizar_Click()
 If MsgBox("¿DESEA ACTUALIZAR LOS DATOS?", vbQuestion + vbYesNo, "ATENCION!") = vbYes Then
-   db.rsACTUACIONES.Fields!FechaIngreso.Value = TxtFechaIngreso.Text
-   db.rsACTUACIONES.Fields!FechaHecho.Value = TxtFechaHecho.Text
-   db.rsACTUACIONES.Fields!Causante.Value = TxtCausante.Text
+   db.rsACTUACIONES.Fields!fechaIngreso.Value = TxtFechaIngreso.Text
+   db.rsACTUACIONES.Fields!fechaHecho.Value = TxtFechaHecho.Text
+   db.rsACTUACIONES.Fields!causante.Value = TxtCausante.Text
    db.rsACTUACIONES.Fields!Destino.Value = TxtDestino.Text
-   db.rsACTUACIONES.Fields!Caratula.Value = TxtCaratula.Text
-   db.rsACTUACIONES.Fields!CarAdmin.Value = TxtCarAdmin.Text
-   db.rsACTUACIONES.Fields!Descripcion.Value = TxtDescripcion.Text
+   db.rsACTUACIONES.Fields!caratula.Value = TxtCaratula.Text
+   db.rsACTUACIONES.Fields!carAdmin.Value = TxtCarAdmin.Text
+   db.rsACTUACIONES.Fields!descripcion.Value = TxtDescripcion.Text
 
    db.rsACTUACIONES.Requery
 End If
@@ -1102,16 +1102,16 @@ Private Sub CmdRegistrar_Click()
         db.rsACTUACIONES.AddNew
  End If
 If MsgBox("¿DESEA REGISTRAR NUEVA ACTUACIÓN?", vbQuestion + vbYesNo, "ACTUACIÓN REGISTRADA") = vbYes Then
-   db.rsACTUACIONES.Fields!Nro.Value = TxtNro.Text
-   db.rsACTUACIONES.Fields!Fecha.Value = CboAnio.Text
-   db.rsACTUACIONES.Fields!Jerarquia.Value = CboJerarquia.Text
-   db.rsACTUACIONES.Fields!FechaIngreso.Value = TxtFechaIngreso.Text
-   db.rsACTUACIONES.Fields!FechaHecho.Value = TxtFechaHecho.Text
-   db.rsACTUACIONES.Fields!Causante.Value = TxtCausante.Text
-   db.rsACTUACIONES.Fields!Destino.Value = TxtDestino.Text
-   db.rsACTUACIONES.Fields!Caratula.Value = TxtCaratula.Text
-   db.rsACTUACIONES.Fields!CarAdmin.Value = TxtCarAdmin.Text
-   db.rsACTUACIONES.Fields!Descripcion.Value = TxtDescripcion.Text
+   db.rsACTUACIONES.Fields!anio.Value = CboAnio.Text
+   db.rsACTUACIONES.Fields!jerarquia.Value = CboJerarquia.Text
+   db.rsACTUACIONES.Fields!fechaIngreso.Value = CDate(TxtFechaIngreso.Text)
+   db.rsACTUACIONES.Fields!fechaHecho.Value = CDate(TxtFechaHecho.Text)
+   db.rsACTUACIONES.Fields!causante.Value = TxtCausante.Text
+   db.rsACTUACIONES.Fields!cestino.Value = TxtDestino.Text
+   db.rsACTUACIONES.Fields!caratula.Value = TxtCaratula.Text
+   db.rsACTUACIONES.Fields!carAdmin.Value = TxtCarAdmin.Text
+   db.rsACTUACIONES.Fields!descripcion.Value = TxtDescripcion.Text
+   db.rsACTUACIONES.Fields!idPersonal.Value = 1
 
    db.rsACTUACIONES.Update
    db.rsACTUACIONES.Requery
@@ -1160,7 +1160,7 @@ Private Sub Form_Load()
 
 db.rsESCALAFON.Open
 Do While Not db.rsESCALAFON.EOF
-   CboJerarquia.AddItem (db.rsESCALAFON.Fields!Jerarquia.Value)
+   CboJerarquia.AddItem (db.rsESCALAFON.Fields!jerarquia.Value)
    db.rsESCALAFON.MoveNext
 Loop
 
