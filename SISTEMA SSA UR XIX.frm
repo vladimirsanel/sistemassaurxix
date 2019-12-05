@@ -548,7 +548,7 @@ Begin VB.Form FormActAdmin
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H000000FF&
-      Height          =   450
+      Height          =   405
       Left            =   8400
       TabIndex        =   25
       Top             =   1320

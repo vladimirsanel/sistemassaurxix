@@ -23,7 +23,7 @@ Begin VB.Form FormListados
       _ExtentY        =   6376
       _Version        =   393216
       HeadLines       =   1
-      RowHeight       =   21
+      RowHeight       =   20
       FormatLocked    =   -1  'True
       BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Arial Rounded MT Bold"
@@ -36,7 +36,7 @@ Begin VB.Form FormListados
       EndProperty
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Arial Rounded MT Bold"
-         Size            =   12
+         Size            =   11.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -47,41 +47,41 @@ Begin VB.Form FormListados
       ColumnCount     =   9
       BeginProperty Column00 
          DataField       =   "idActuaciones"
-         Caption         =   "idActuaciones"
+         Caption         =   "N°"
          BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
-            Type            =   0
-            Format          =   ""
+            Type            =   1
+            Format          =   "0"
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
             LCID            =   11274
-            SubFormatType   =   0
+            SubFormatType   =   1
          EndProperty
       EndProperty
       BeginProperty Column01 
          DataField       =   "anio"
          Caption         =   "anio"
          BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
-            Type            =   0
-            Format          =   ""
+            Type            =   1
+            Format          =   "0"
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
             LCID            =   11274
-            SubFormatType   =   0
+            SubFormatType   =   1
          EndProperty
       EndProperty
       BeginProperty Column02 
          DataField       =   "fechaIngreso"
          Caption         =   "fechaIngreso"
          BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
-            Type            =   0
-            Format          =   ""
+            Type            =   1
+            Format          =   "0"
             HaveTrueFalseNull=   0
             FirstDayOfWeek  =   0
             FirstWeekOfYear =   0
             LCID            =   11274
-            SubFormatType   =   0
+            SubFormatType   =   1
          EndProperty
       EndProperty
       BeginProperty Column03 
