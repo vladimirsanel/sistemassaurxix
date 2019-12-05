@@ -7,8 +7,8 @@ Begin VB.Form FormEscyJerarquia
    ClientTop       =   465
    ClientWidth     =   15360
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   8970
+   ScaleWidth      =   15360
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.CommandButton CmdSalir 
