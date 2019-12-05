@@ -631,6 +631,7 @@ Private Sub CmdSalir_Click()
 End Sub
 
 Private Sub Form_Load()
+On Error Resume Next
 db.rsESCALAFON.Open
 CargarRegistro
 End Sub

@@ -21,11 +21,11 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
       QuoteChar       =   96
       SeparatorChar   =   46
    EndProperty
-   NumRecordsets   =   4
+   NumRecordsets   =   3
    BeginProperty Recordset1 
       CommandName     =   "ESCALAFON"
       CommDispId      =   1008
-      RsDispId        =   1047
+      RsDispId        =   1048
       CommandText     =   "Escalafon"
       ActiveConnectionName=   "db"
       CommandType     =   2
@@ -39,8 +39,8 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Size            =   4
          Scale           =   0
          Type            =   3
-         Name            =   "registro"
-         Caption         =   "registro"
+         Name            =   "idEscalafon"
+         Caption         =   "idEscalafon"
       EndProperty
       BeginProperty Field2 
          Precision       =   0
@@ -74,7 +74,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
    BeginProperty Recordset2 
       CommandName     =   "PERSONAL"
       CommDispId      =   1014
-      RsDispId        =   1019
+      RsDispId        =   1049
       CommandText     =   "Personal"
       ActiveConnectionName=   "db"
       CommandType     =   2
@@ -82,20 +82,20 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
       Locktype        =   3
       Expanded        =   -1  'True
       IsRSReturning   =   -1  'True
-      NumFields       =   7
+      NumFields       =   8
       BeginProperty Field1 
          Precision       =   10
          Size            =   4
          Scale           =   0
          Type            =   3
-         Name            =   "niPersonal"
-         Caption         =   "niPersonal"
+         Name            =   "idPersonal"
+         Caption         =   "idPersonal"
       EndProperty
       BeginProperty Field2 
          Precision       =   0
-         Size            =   255
+         Size            =   536870910
          Scale           =   0
-         Type            =   202
+         Type            =   203
          Name            =   "jerarquia"
          Caption         =   "jerarquia"
       EndProperty
@@ -112,8 +112,8 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Size            =   50
          Scale           =   0
          Type            =   202
-         Name            =   "apeyNom"
-         Caption         =   "apeyNom"
+         Name            =   "apeNom"
+         Caption         =   "apeNom"
       EndProperty
       BeginProperty Field5 
          Precision       =   0
@@ -139,56 +139,23 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "obs"
          Caption         =   "obs"
       EndProperty
+      BeginProperty Field8 
+         Precision       =   10
+         Size            =   4
+         Scale           =   0
+         Type            =   3
+         Name            =   "idEscalafon"
+         Caption         =   "idEscalafon"
+      EndProperty
       NumGroups       =   0
       ParamCount      =   0
       RelationCount   =   0
       AggregateCount  =   0
    EndProperty
    BeginProperty Recordset3 
-      CommandName     =   "REGISTRO"
-      CommDispId      =   1020
-      RsDispId        =   1029
-      CommandText     =   "Registro"
-      ActiveConnectionName=   "db"
-      CommandType     =   2
-      dbObjectType    =   1
-      Locktype        =   3
-      Expanded        =   -1  'True
-      IsRSReturning   =   -1  'True
-      NumFields       =   3
-      BeginProperty Field1 
-         Precision       =   10
-         Size            =   4
-         Scale           =   0
-         Type            =   3
-         Name            =   "Id"
-         Caption         =   "Id"
-      EndProperty
-      BeginProperty Field2 
-         Precision       =   0
-         Size            =   8
-         Scale           =   0
-         Type            =   7
-         Name            =   "fechaIngreso"
-         Caption         =   "fechaIngreso"
-      EndProperty
-      BeginProperty Field3 
-         Precision       =   10
-         Size            =   4
-         Scale           =   0
-         Type            =   3
-         Name            =   "id_nro"
-         Caption         =   "id_nro"
-      EndProperty
-      NumGroups       =   0
-      ParamCount      =   0
-      RelationCount   =   0
-      AggregateCount  =   0
-   EndProperty
-   BeginProperty Recordset4 
       CommandName     =   "ACTUACIONES"
       CommDispId      =   1037
-      RsDispId        =   1039
+      RsDispId        =   1052
       CommandText     =   "Actuaciones"
       ActiveConnectionName=   "db"
       CommandType     =   2
@@ -210,34 +177,26 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Size            =   4
          Scale           =   0
          Type            =   3
-         Name            =   "nro"
-         Caption         =   "nro"
+         Name            =   "anio"
+         Caption         =   "anio"
       EndProperty
       BeginProperty Field3 
-         Precision       =   10
-         Size            =   4
-         Scale           =   0
-         Type            =   3
-         Name            =   "fecha"
-         Caption         =   "fecha"
-      EndProperty
-      BeginProperty Field4 
          Precision       =   0
-         Size            =   536870910
+         Size            =   8
          Scale           =   0
-         Type            =   203
+         Type            =   7
          Name            =   "fechaIngreso"
          Caption         =   "fechaIngreso"
       EndProperty
-      BeginProperty Field5 
+      BeginProperty Field4 
          Precision       =   0
-         Size            =   536870910
+         Size            =   8
          Scale           =   0
-         Type            =   203
+         Type            =   7
          Name            =   "fechaHecho"
          Caption         =   "fechaHecho"
       EndProperty
-      BeginProperty Field6 
+      BeginProperty Field5 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -245,7 +204,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "causante"
          Caption         =   "causante"
       EndProperty
-      BeginProperty Field7 
+      BeginProperty Field6 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -253,7 +212,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "jerarquia"
          Caption         =   "jerarquia"
       EndProperty
-      BeginProperty Field8 
+      BeginProperty Field7 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -261,7 +220,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "destino"
          Caption         =   "destino"
       EndProperty
-      BeginProperty Field9 
+      BeginProperty Field8 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -269,7 +228,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "caratula"
          Caption         =   "caratula"
       EndProperty
-      BeginProperty Field10 
+      BeginProperty Field9 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -277,7 +236,7 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "carAdmin"
          Caption         =   "carAdmin"
       EndProperty
-      BeginProperty Field11 
+      BeginProperty Field10 
          Precision       =   0
          Size            =   536870910
          Scale           =   0
@@ -285,13 +244,21 @@ Begin {C0E45035-5775-11D0-B388-00A0C9055D8E} db
          Name            =   "descripcion"
          Caption         =   "descripcion"
       EndProperty
+      BeginProperty Field11 
+         Precision       =   0
+         Size            =   536870910
+         Scale           =   0
+         Type            =   203
+         Name            =   "opciones"
+         Caption         =   "opciones"
+      EndProperty
       BeginProperty Field12 
          Precision       =   10
          Size            =   4
          Scale           =   0
          Type            =   3
-         Name            =   "ni_personal"
-         Caption         =   "ni_personal"
+         Name            =   "idPersonal"
+         Caption         =   "idPersonal"
       EndProperty
       NumGroups       =   0
       ParamCount      =   0
