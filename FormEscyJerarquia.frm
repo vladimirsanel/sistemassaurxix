@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form FormEscyJerarquia 
    BackColor       =   &H00FF8080&
    Caption         =   "ESCALAFÓN Y JERARQUÍA"
@@ -11,6 +12,112 @@ Begin VB.Form FormEscyJerarquia
    ScaleWidth      =   15360
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.Frame Frame1 
+      BackColor       =   &H00FF8080&
+      Height          =   4095
+      Left            =   1680
+      TabIndex        =   24
+      Top             =   5520
+      Width           =   13455
+      Begin MSDataGridLib.DataGrid DataGrid1 
+         Bindings        =   "FormEscyJerarquia.frx":0000
+         Height          =   3735
+         Left            =   120
+         TabIndex        =   25
+         Top             =   240
+         Width           =   13215
+         _ExtentX        =   23310
+         _ExtentY        =   6588
+         _Version        =   393216
+         AllowUpdate     =   -1  'True
+         AllowArrows     =   -1  'True
+         BackColor       =   16776960
+         BorderStyle     =   0
+         Enabled         =   -1  'True
+         HeadLines       =   2
+         RowHeight       =   18
+         RowDividerStyle =   6
+         FormatLocked    =   -1  'True
+         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial Rounded MT Bold"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         DataMember      =   "ESCALAFON"
+         ColumnCount     =   3
+         BeginProperty Column00 
+            DataField       =   "Escalafon"
+            Caption         =   "                             ESCALAFON"
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   11274
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column01 
+            DataField       =   "subescalafon"
+            Caption         =   "                             SUBESCALAFÓN"
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   11274
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column02 
+            DataField       =   "jerarquia"
+            Caption         =   "                                           JERARQUÍA"
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   11274
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         SplitCount      =   1
+         BeginProperty Split0 
+            ScrollBars      =   0
+            SizeMode        =   1
+            AllowRowSizing  =   -1  'True
+            AllowSizing     =   -1  'True
+            BeginProperty Column00 
+               Alignment       =   2
+               ColumnWidth     =   3795,024
+            EndProperty
+            BeginProperty Column01 
+               Alignment       =   2
+               ColumnWidth     =   3929,953
+            EndProperty
+            BeginProperty Column02 
+               Alignment       =   2
+               ColumnWidth     =   5174,929
+            EndProperty
+         EndProperty
+      End
+   End
    Begin VB.CommandButton CmdSalir 
       BackColor       =   &H000000FF&
       Caption         =   "X"
@@ -31,7 +138,7 @@ Begin VB.Form FormEscyJerarquia
       Width           =   375
    End
    Begin VB.CommandButton CmdPersonalPolicial 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H8000000D&
       Caption         =   "PERSONAL POLICIAL"
       BeginProperty Font 
          Name            =   "Arial Rounded MT Bold"
@@ -42,15 +149,16 @@ Begin VB.Form FormEscyJerarquia
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
-      Left            =   10320
+      Height          =   615
+      Left            =   9720
+      MaskColor       =   &H00FF0000&
       Style           =   1  'Graphical
       TabIndex        =   12
       Top             =   9840
-      Width           =   2415
+      Width           =   1815
    End
    Begin VB.CommandButton CmdActAdmin 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H8000000D&
       Caption         =   "ACTUACIONES ADMINISTRATIVAS"
       BeginProperty Font 
          Name            =   "Arial Rounded MT Bold"
@@ -61,15 +169,16 @@ Begin VB.Form FormEscyJerarquia
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
+      Height          =   615
       Left            =   7680
+      MaskColor       =   &H00FF0000&
       Style           =   1  'Graphical
       TabIndex        =   11
       Top             =   9840
-      Width           =   2415
+      Width           =   1815
    End
    Begin VB.CommandButton CmdMDISSAURXIX 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H8000000D&
       Caption         =   "PANTALLA PRINCIPAL"
       BeginProperty Font 
          Name            =   "Arial Rounded MT Bold"
@@ -80,19 +189,20 @@ Begin VB.Form FormEscyJerarquia
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
-      Left            =   5040
+      Height          =   615
+      Left            =   5640
+      MaskColor       =   &H00FF0000&
       Style           =   1  'Graphical
       TabIndex        =   10
       Top             =   9840
-      Width           =   2415
+      Width           =   1815
    End
    Begin VB.Frame FrameCmd 
       BackColor       =   &H00FF8080&
       Height          =   3615
       Left            =   16200
       TabIndex        =   18
-      Top             =   4800
+      Top             =   4200
       Width           =   3255
       Begin VB.CommandButton CmdCancelar 
          BackColor       =   &H000000FF&
@@ -195,7 +305,7 @@ Begin VB.Form FormEscyJerarquia
       Height          =   1335
       Left            =   16200
       TabIndex        =   17
-      Top             =   3120
+      Top             =   2280
       Width           =   3255
       Begin VB.TextBox TxtBuscar 
          Alignment       =   2  'Center
@@ -237,7 +347,7 @@ Begin VB.Form FormEscyJerarquia
    End
    Begin VB.Frame FrameDatos 
       BackColor       =   &H00FF8080&
-      Height          =   6255
+      Height          =   3855
       Left            =   1680
       TabIndex        =   0
       Top             =   1560
@@ -259,6 +369,7 @@ Begin VB.Form FormEscyJerarquia
          Left            =   12840
          TabIndex        =   20
          Top             =   240
+         Visible         =   0   'False
          Width           =   495
       End
       Begin VB.TextBox TxtJerarquia 
@@ -276,7 +387,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   375
          Left            =   3720
          TabIndex        =   3
-         Top             =   3240
+         Top             =   2160
          Width           =   6255
       End
       Begin VB.TextBox TxtEscalafon 
@@ -294,7 +405,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   375
          Left            =   3720
          TabIndex        =   1
-         Top             =   1080
+         Top             =   720
          Width           =   6255
       End
       Begin VB.TextBox TxtSubescalafon 
@@ -312,7 +423,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   375
          Left            =   3720
          TabIndex        =   2
-         Top             =   2160
+         Top             =   1440
          Width           =   6255
       End
       Begin VB.CommandButton CmdBorrar 
@@ -328,10 +439,10 @@ Begin VB.Form FormEscyJerarquia
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   10800
+         Left            =   11160
          Style           =   1  'Graphical
          TabIndex        =   5
-         Top             =   5400
+         Top             =   3240
          Width           =   1575
       End
       Begin VB.CommandButton CmdRegistrar 
@@ -347,10 +458,10 @@ Begin VB.Form FormEscyJerarquia
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   9120
+         Left            =   9480
          Style           =   1  'Graphical
          TabIndex        =   4
-         Top             =   5400
+         Top             =   3240
          Width           =   1575
       End
       Begin VB.Label LblJerarquia 
@@ -369,7 +480,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   255
          Left            =   1440
          TabIndex        =   16
-         Top             =   3285
+         Top             =   2205
          Width           =   2055
       End
       Begin VB.Label LblEscalafon 
@@ -388,7 +499,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   255
          Left            =   1320
          TabIndex        =   15
-         Top             =   1140
+         Top             =   780
          Width           =   2175
       End
       Begin VB.Label LblSubescalafon 
@@ -407,7 +518,7 @@ Begin VB.Form FormEscyJerarquia
          Height          =   255
          Left            =   1440
          TabIndex        =   14
-         Top             =   2205
+         Top             =   1485
          Width           =   2055
       End
    End
@@ -438,18 +549,19 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Sub CargarDatos()
-TxtEscalafon.Text = db.rsESCALAFON.Fields!Escalafon.Value
+Txtregistro.Text = db.rsESCALAFON.Fields!idEscalafon.Value
+TxtEscalafon.Text = db.rsESCALAFON.Fields!escalafon.Value
 TxtSubescalafon.Text = db.rsESCALAFON.Fields!Subescalafon.Value
 TxtJerarquia.Text = db.rsESCALAFON.Fields!Jerarquia.Value
 End Sub
 
-Function BuscarJerarquia(x As Long) As Boolean
+Function BuscarJerarquia(X As Long) As Boolean
 BuscarJerarquia = False
 If db.rsESCALAFON.RecordCount > 0 Then
    db.rsESCALAFON.MoveFirst
    Do While Not db.rsESCALAFON.EOF
 
-   If x = db.rsESCALAFON.Fields!Registro.Value Then
+   If X = db.rsESCALAFON.Fields!idEscalafon.Value Then
       BuscarJerarquia = True
    Exit Do
    Else
@@ -459,9 +571,11 @@ Loop
 
 End If
 End Function
+
 Function CargarRegistro()
+On Error Resume Next
 db.rsESCALAFON.MoveLast
-Codigo = db.rsESCALAFON.Fields!Registro.Value
+Codigo = db.rsESCALAFON.Fields!idEscalafon.Value
 C = Codigo + 1
 Txtregistro.Text = C
 End Function
@@ -472,7 +586,7 @@ End Sub
 
 Private Sub CmdActualizar_Click()
 If MsgBox("¿DESEA ACTUALIZAR LOS DATOS?", vbQuestion + vbYesNo, "ATENCION!") = vbYes Then
-   db.rsESCALAFON.Fields!Escalafon.Value = TxtEscalafon.Text
+   db.rsESCALAFON.Fields!escalafon.Value = TxtEscalafon.Text
    db.rsESCALAFON.Fields!Subescalafon.Value = TxtSubescalafon.Text
    db.rsESCALAFON.Fields!Jerarquia.Value = TxtJerarquia.Text
 
@@ -505,6 +619,8 @@ Private Sub CmdAlta_Click()
    TxtEscalafon.Enabled = True
    TxtSubescalafon.Enabled = True
    TxtJerarquia.Enabled = True
+   CmdModificar.Enabled = False
+   CmdActualizar.Enabled = False
    
    TxtEscalafon.BackColor = &H80000005
    TxtSubescalafon.BackColor = &H80000005
@@ -533,6 +649,15 @@ End If
 
 CargarDatos
 Me.Refresh
+End Sub
+
+Private Sub CmdBorrar_Click()
+   TxtEscalafon.Text = ""
+   TxtSubescalafon.Text = ""
+   TxtJerarquia.Text = ""
+   TxtBuscar.Text = ""
+   
+   TxtEscalafon.SetFocus
 End Sub
 
 Private Sub CmdBuscar_Click()
@@ -590,11 +715,11 @@ Private Sub CmdModificar_Click()
    TxtJerarquia.BackColor = &H80000005
    
    CmdRegistrar.Enabled = False
-   CmdBorrar.Enabled = False
+   CmdBorrar.Enabled = True
    CmdAlta.Enabled = False
    CmdBaja.Enabled = False
-   CmdBuscar.Enabled = False
-   Txtregistro.Enabled = False
+   CmdActualizar.Enabled = True
+   CmdBuscar.Enabled = True
 
    TxtEscalafon.SetFocus
 End Sub
@@ -608,7 +733,8 @@ If Not BuscarJerarquia(Txtregistro.Text) Then
        db.rsESCALAFON.AddNew
 End If
 If MsgBox("¿DESEA REGISTRAR LA JERARQUÍA?", vbQuestion + vbYesNo, "JERARQUÍA REGISTRADA") = vbYes Then
-   db.rsESCALAFON.Fields!Escalafon.Value = TxtEscalafon.Text
+   db.rsESCALAFON.Fields!idEscalafon.Value = Txtregistro.Text
+   db.rsESCALAFON.Fields!escalafon.Value = TxtEscalafon.Text
    db.rsESCALAFON.Fields!Subescalafon.Value = TxtSubescalafon.Text
    db.rsESCALAFON.Fields!Jerarquia.Value = TxtJerarquia.Text
 

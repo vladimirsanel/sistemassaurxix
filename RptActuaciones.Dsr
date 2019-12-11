@@ -41,7 +41,7 @@ Begin {78E93846-85FD-11D0-8487-00A0C90DC8A9} RptActuaciones
          _Version        =   393216
          Name            =   "Etiqueta5"
          Object.Width           =   9060
-         Object.Height          =   567
+         Object.Height          =   570
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Arial Rounded MT Bold"
             Size            =   20.25
@@ -60,7 +60,7 @@ Begin {78E93846-85FD-11D0-8487-00A0C90DC8A9} RptActuaciones
          Name            =   "Etiqueta12"
          Object.Top             =   567
          Object.Width           =   9060
-         Object.Height          =   567
+         Object.Height          =   570
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Arial Rounded MT Bold"
             Size            =   20.25
